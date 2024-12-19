@@ -4,12 +4,13 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap Demo</title>
+    <title>My Year with Aingeal</title>
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap">
+
     <style>
-        /* General Body Styling */
         body,
         html {
             height: 100%;
@@ -20,13 +21,11 @@
             align-items: center;
         }
 
-        /* Carousel Container */
         #carouselExampleControls {
             width: 100%;
             max-width: 80vw;
         }
 
-        /* Smooth animation for carousel items */
         .carousel-item {
             opacity: 0;
             animation: appear 0.8s linear;
@@ -46,7 +45,6 @@
             }
         }
 
-        /* Centering Content */
         .carousel-item {
             display: flex;
             justify-content: center;
@@ -60,10 +58,9 @@
             gap: 20px;
         }
 
-        /* Card Styling */
         .card {
             width: 18rem;
-            height: 22rem;
+            height: 32rem;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -75,7 +72,7 @@
 
         .card-img-top {
             object-fit: cover;
-            height: 200px;
+            height: 390px;
             width: 100%;
         }
 
@@ -90,17 +87,15 @@
             }
         }
 
-        /* Next Button Styling */
         #next-button-container {
-            display: none; /* Initially hidden */
-            position: absolute;
-            bottom: 10%;
+            display: none;
+            position: fixed;
+            bottom: 20px;
             left: 50%;
             transform: translateX(-50%);
             animation: fadeIn 1s ease-in-out;
         }
 
-        /* Fade-in animation for the Next button */
         @keyframes fadeIn {
             from {
                 opacity: 0;
@@ -111,7 +106,6 @@
             }
         }
 
-        /* Button Styling */
         #next-btn {
             padding: 10px 20px;
             font-size: 1rem;
@@ -128,108 +122,219 @@
             background-color: #2980b9;
         }
     </style>
+
+    <style>
+        #centered-title {
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            background-color: white;
+            color: black;
+            border-radius: 10px;
+            padding: 10px;
+            width: 75%;
+        }
+    </style>
+
+
+
 </head>
 
 <body>
     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <h1 id="centered-title">
+            Our 2024 together
+        </h1>
         <div class="carousel-inner">
-            <!-- First Carousel Item -->
             <div class="carousel-item active">
                 <div class="cards-wrapper">
                     <div class="card">
-                        <img src="image.png" class="card-img-top" alt="image.png">
+                        <img src="Jan5.jpg" class="card-img-top" alt="image.png">
                         <div class="card-body">
-                            <h5 class="card-title">Card 1</h5>
-                            <p class="card-text">Example text for card 1.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <h5 class="card-title" id="card-title-1">January 5</h5>
+                            <p class="card-text">Wedding Date.</p>
                         </div>
                     </div>
                     <div class="card">
-                        <img src="image.png" class="card-img-top" alt="image.png">
+                        <img src="Feb24.jpg" class="card-img-top" alt="image.png">
                         <div class="card-body">
-                            <h5 class="card-title">Card 2</h5>
-                            <p class="card-text">Example text for card 2.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <h5 class="card-title" id="card-title-2">February 24</h5>
+                            <p class="card-text">BGC Nighttime Date.</p>
                         </div>
                     </div>
                     <div class="card">
-                        <img src="image.png" class="card-img-top" alt="image.png">
+                        <img src="Mar24.jpg" class="card-img-top" alt="image.png">
                         <div class="card-body">
-                            <h5 class="card-title">Card 3</h5>
-                            <p class="card-text">Example text for card 3.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <h5 class="card-title" id="card-title-3">March 24</h5>
+                            <p class="card-text">Binondo Foodtrip Date.</p>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Second Carousel Item -->
+            <!-- Second Carousel Item (Apr - Jun) -->
             <div class="carousel-item">
                 <div class="cards-wrapper">
                     <div class="card">
-                        <img src="image.png" class="card-img-top" alt="image.png">
+                        <img src="Apr28.jpeg" class="card-img-top" alt="image.png">
                         <div class="card-body">
-                            <h5 class="card-title">Card 4</h5>
-                            <p class="card-text">Example text for card 4.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <h5 class="card-title" id="card-title-4">April 28</h5>
+                            <p class="card-text">1st Sahod ni Piolo date.</p>
                         </div>
                     </div>
                     <div class="card">
-                        <img src="image.png" class="card-img-top" alt="image.png">
+                        <img src="May11.jpeg" class="card-img-top" alt="image.png">
                         <div class="card-body">
-                            <h5 class="card-title">Card 5</h5>
-                            <p class="card-text">Example text for card 5.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <h5 class="card-title" id="card-title-5">May 11</h5>
+                            <p class="card-text">Ayala Malls Date.</p>
                         </div>
                     </div>
                     <div class="card">
-                        <img src="image.png" class="card-img-top" alt="image.png">
+                        <img src="June30.jpg" class="card-img-top" alt="image.png">
                         <div class="card-body">
-                            <h5 class="card-title">Card 6</h5>
-                            <p class="card-text">Example text for card 6.</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <h5 class="card-title" id="card-title-6">June 30</h5>
+                            <p class="card-text">Samg Date with friends.</p>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <!-- Third Carousel Item (Jul - Sep) -->
+            <div class="carousel-item">
+                <div class="cards-wrapper">
+                    <div class="card">
+                        <img src="July29.jpg" class="card-img-top" alt="image.png">
+                        <div class="card-body">
+                            <h5 class="card-title" id="card-title-7">July 29</h5>
+                            <p class="card-text">First time out with Marley and Tuti.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="Aug30.jpg" class="card-img-top" alt="image.png">
+                        <div class="card-body">
+                            <h5 class="card-title" id="card-title-8">August 30</h5>
+                            <p class="card-text">7Twenty7 Diner Date.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="Sep7.jpg" class="card-img-top" alt="image.png">
+                        <div class="card-body">
+                            <h5 class="card-title" id="card-title-9">September 7</h5>
+                            <p class="card-text">Quiapo Samg Date.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fourth Carousel Item (Oct - Dec) -->
+            <div class="carousel-item">
+                <div class="cards-wrapper">
+                    <div class="card">
+                        <img src="Oct26.jpg" class="card-img-top" alt="image.png">
+                        <div class="card-body">
+                            <h5 class="card-title" id="card-title-10">October 26</h5>
+                            <p class="card-text">Ukay Date.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="Nov1.jpg" class="card-img-top" alt="image.png">
+                        <div class="card-body">
+                            <h5 class="card-title" id="card-title-11">November 1</h5>
+                            <p class="card-text">First time we took Marley out.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="Dec7.jpg" class="card-img-top" alt="image.png">
+                        <div class="card-body">
+                            <h5 class="card-title" id="card-title-12">December 7</h5>
+                            <p class="card-text">Vikings with CIS team.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carousel Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
 
-        <!-- Carousel Controls -->
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
-            data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
-            data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-    </div>
+        <!-- Hidden Next Button Container -->
+        <div id="next-button-container">
+            <button id="next-btn" class="btn btn-primary">Start Over</button>
+        </div>
 
-    <!-- Hidden Next Button Container -->
-    <div id="next-button-container">
-        <button id="next-btn" class="btn btn-primary">Next</button>
-    </div>
+        <!-- Bootstrap 5 JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
 
-    <!-- Bootstrap 5 JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
+        <script>
+            // Play happybirthday.mp3 when the page loads
+            window.addEventListener('load', () => {
+                const audio = new Audio('happybirthday.mp3');
+                audio.loop = true; // Loop the audio
+                audio.play();  // Play the audio file
+            });
 
-    <script>
-        // Display the "Next" button after 10 seconds
-        setTimeout(() => {
-            const nextButtonContainer = document.getElementById('next-button-container');
-            nextButtonContainer.style.display = 'block';  // Show the "Next" button
-        }, 10000); // 10 seconds delay
+            setTimeout(() => {
+                const nextButtonContainer = document.getElementById('next-button-container');
+                nextButtonContainer.style.display = 'block';  // Show the "Next" button
+            }, 5000); // 5 seconds delay
 
-        // Navigate to cake.html when the "Next" button is clicked
-        const nextBtn = document.getElementById('next-btn');
-        nextBtn.addEventListener('click', () => {
-            window.location.href = "cake.html"; // Redirect to cake.html
-        });
-    </script>
+            // Navigate to cake.html when the "Next" button is clicked
+            const nextBtn = document.getElementById('next-btn');
+            nextBtn.addEventListener('click', () => {
+                window.location.href = "index.html"; // Redirect to index.html
+            });
+
+            // Function to get full month name
+            function getFullMonthName(abbreviation) {
+                const months = {
+                    Jan: 'January',
+                    Feb: 'February',
+                    Mar: 'March',
+                    Apr: 'April',
+                    May: 'May',
+                    Jun: 'June',
+                    Jul: 'July',
+                    Aug: 'August',
+                    Sep: 'September',
+                    Oct: 'October',
+                    Nov: 'November',
+                    Dec: 'December'
+                };
+                return months[abbreviation] || abbreviation; // Return full month name or the abbreviation if not found
+            }
+
+            // Function to extract the date from the image filename
+            function extractDate(filename) {
+                const regex = /([A-Za-z]+)(\d+)/; // Regex to match the format like Jan5, Feb24, etc.
+                const match = filename.match(regex);
+                if (match) {
+                    const month = getFullMonthName(match[1]); // Get the full month name
+                    return `${month} ${match[2]}`; // Returns full month name and day
+                }
+                return ''; // Default return value if no match found
+            }
+
+            // Assign the image filenames to the card titles dynamically
+            document.querySelectorAll('.card-img-top').forEach((img, index) => {
+                const titleElement = img.closest('.card').querySelector('.card-title');
+                const filename = img.src.split('/').pop(); // Get the file name from the src
+                const date = extractDate(filename);
+                titleElement.textContent = date; // Update the card title with the extracted date
+            });
+        </script>
+
 </body>
 
 </html>

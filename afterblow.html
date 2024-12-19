@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Happy Birthday</title>
+    <link rel="stylesheet" href="afterblow.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    <style>
+      /* Fade-in effect for the page */
+      body {
+        opacity: 0;
+        transition: opacity 1s ease-in;
+      }
+      body.loaded {
+        opacity: 1;
+      }
+
+      /* Style for the button */
+      #goBackButton {
+        display: none; /* Initially hide the button */
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 10px 20px;
+        font-size: 18px;
+        background-color: #f39c12;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+      }
+
+      /* Animation for button appearance */
+      #goBackButton.visible {
+        display: block; /* Show button */
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="c"></canvas>
+
+    <script src="afterblow.js"></script>
+
+    <!-- Button to go back to index.html -->
+    <button id="goBackButton" onclick="window.location.href = 'new.html';">Next</button>
+
+    <script>
+      // Wait for the page to load
+      window.onload = function () {
+        // Add fade-in effect to the body
+        document.body.classList.add('loaded');
+
+        // Play the audio in the background on a loop
+        var audio = new Audio('imnayeon.mp3'); // Replace with your actual MP3 path
+        audio.loop = true; // Loop the audio
+        audio.play(); // Start playing the audio
+
+        // After 10 seconds, make the button appear
+        setTimeout(function () {
+          var button = document.getElementById('goBackButton');
+          button.classList.add('visible'); // Add 'visible' class to trigger the button transition
+        }, 15000); // Wait for 10 seconds
+      };
+    </script>
+  </body>
+</html>
