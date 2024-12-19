@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,7 +8,6 @@
     <link rel="stylesheet" href="./index.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap">
 </head>
-
 <body>
     <div class="container">
         <div class="envelope-wrapper">
@@ -29,13 +27,32 @@
             </div>
             <div class="heart"></div>
         </div>
+
+        <!-- Next Button (Initially hidden) -->
+        <div class="next-btn-container" style="display: none;">
+            <button id="next-btn" class="btn btn-primary">Next</button>
+        </div>
     </div>
+
     <script>
         const envelope = document.querySelector('.envelope-wrapper');
+        const nextButton = document.getElementById('next-btn');
+
+        // Open the envelope and show next button with animation
         envelope.addEventListener('click', () => {
             envelope.classList.toggle('flap');
+            // Show next button with fade-in animation
+            nextButton.parentElement.style.display = 'block';
+            nextButton.classList.add('fade-in');
+        });
+
+        // Transition to new.html when the next button is clicked
+        nextButton.addEventListener('click', () => {
+            document.body.classList.add('fade-out');
+            setTimeout(() => {
+                window.location.href = 'new.html'; // Redirect to new.html
+            }, 500); // Wait for fade-out animation to finish
         });
     </script>
 </body>
-
 </html>
